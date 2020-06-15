@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Voorraad {
     ArrayList<Drank> voorraad;
     int totaalVoorraad;
-    int aantalCola;
+    int aantalFris;
     int aantalWijn;
     int aantalBier;
 
@@ -16,8 +16,8 @@ public class Voorraad {
         voorraad.add(drank);
         this.totaalVoorraad++;
 
-        if(drank.naamDrank.equals("cola")){
-            aantalCola++;
+        if(drank.naamDrank.equals("fris")){
+            aantalFris++;
         }
         if(drank.naamDrank.equals("wijn")){
             aantalWijn++;
@@ -41,8 +41,8 @@ public class Voorraad {
         }
     }
 
-    int getAantalCola(){
-        return aantalCola;
+    int getAantalFris(){
+        return aantalFris;
 
     }
     int getAantalWijn(){

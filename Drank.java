@@ -1,8 +1,5 @@
 package com.miniopdrachtenqien;
 
-import java.text.NumberFormat;
-import java.util.ArrayList;
-
 public class Drank {
     String naamDrank;
     int dronkenschap;
