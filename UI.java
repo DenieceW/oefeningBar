@@ -10,6 +10,9 @@ public class UI {
     Drank fris = new Drank("fris",1.10,2);
     Voorraad voorraad = new Voorraad();
     Klant klant = new Klant();
+    int aantalBierGedronken = 0;
+    int aantalWijnGedronken = 0;
+
 
     void letsDrank(){
         printMenu();
@@ -19,11 +22,16 @@ public class UI {
             if (invoer.equals("stop")) {
                 break;
             }
-            if(klant.dronkenschap >= 30){
-                System.out.println("Ik denk dat je teveel hebt gedronken en schenk niks meer in. " +
-                        "Tijd om naar huis te gaan en de roes uit te slapen!");
+            if(klant.dronkenschap >= 25 && klant.dronkenschap <= 35){
+                System.out.println("Misschien tijd voor een frisje? Jouw wangetjes worden erg rood ;-)");
+            }
+            if(klant.dronkenschap >= 50){
+                System.out.println("Je hebt " + aantalBierGedronken + " biertjes en " + aantalWijnGedronken + " wijn gedronken. Mogelijk" +
+                        " heb je een probleem..." +
+                        "Ik denk dat je teveel hebt gedronken en schenk niks meer in.\nTijd om naar huis te gaan en de roes uit te slapen!");
                 break;
             }
+
             if(klant.geld <= 0){
                 System.out.println("Je geld is op en ik run geen goede doelen instelling. Kom maar terug wanneer je meer te spenderen hebt!");
                 break;
@@ -57,10 +65,10 @@ public class UI {
           if (invoer.equals("bier")) {
             if (voorraad.getAantalBier() > 0 && klant.geld > bier.prijs) {
                 System.out.println("Hoeveel biertjes?");
-                int aantalBiertjes = Integer.parseInt(scanner.nextLine());
-                voorraad.aantalBier -= aantalBiertjes; //voorraad neemt af
-                klant.geld -= (bier.prijs * aantalBiertjes);
-                klant.dronkenschap += (bier.dronkenschap * aantalBiertjes);
+                aantalBierGedronken = Integer.parseInt(scanner.nextLine());
+                voorraad.aantalBier -= aantalBierGedronken; //voorraad neemt af
+                klant.geld -= (bier.prijs * aantalBierGedronken);
+                klant.dronkenschap += (bier.dronkenschap * aantalBierGedronken);
             } else if (voorraad.getAantalBier() <= 0) {
                 System.out.println("Sorry, het bier is op!");
             } else if (klant.geld < bier.prijs) {
@@ -72,10 +80,10 @@ public class UI {
          if (invoer.equals("wijn")) {
             if (voorraad.getAantalWijn() > 0 && klant.geld > wijn.prijs) {
                 System.out.println("Hoeveel wijntjes?");
-                int aantalWijntjes = Integer.parseInt(scanner.nextLine());
-                voorraad.aantalWijn -= aantalWijntjes; //voorraad neemt af
-                klant.geld -= (wijn.prijs * aantalWijntjes);
-                klant.dronkenschap += (wijn.dronkenschap * aantalWijntjes);
+                aantalWijnGedronken = Integer.parseInt(scanner.nextLine());
+                voorraad.aantalWijn -= aantalWijnGedronken; //voorraad neemt af
+                klant.geld -= (wijn.prijs * aantalWijnGedronken);
+                klant.dronkenschap += (wijn.dronkenschap * aantalWijnGedronken);
             } else if (voorraad.getAantalWijn() <= 0) {
                 System.out.println("Sorry, helaas is de wijn op!");
             } else if (klant.geld < wijn.prijs) {
