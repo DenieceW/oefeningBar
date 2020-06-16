@@ -20,13 +20,14 @@ public class UI {
             System.out.println("Maak een keuze uit een bier, wijn of fris:-)");
             String invoer = scanner.nextLine().toLowerCase();
             if (invoer.equals("stop")) {
+                System.out.println("Bedankt voor de gezelligheid en bijdrage aan onze omzet! Hopelijk tot snel :-)");
                 break;
             }
             if(klant.dronkenschap >= 25 && klant.dronkenschap <= 35){
                 System.out.println("Misschien tijd voor een frisje? Jouw wangetjes worden erg rood ;-)");
             }
             if(klant.dronkenschap >= 50){
-                System.out.println("Je hebt " + aantalBierGedronken + " biertjes en " + aantalWijnGedronken + " wijn gedronken. Mogelijk" +
+                System.out.println("Je hebt " + aantalBierGedronken + " PARBO biertjes en " + aantalWijnGedronken + " wijn gedronken. Mogelijk" +
                         " heb je een probleem..." +
                         "Ik denk dat je teveel hebt gedronken en schenk niks meer in.\nTijd om naar huis te gaan en de roes uit te slapen!");
                 break;
@@ -49,8 +50,9 @@ public class UI {
         System.out.println("**********************");
         System.out.println("Je kunt een keuze maken uit onderstaande drankjes!");
         System.out.println("Wijn: kost 4,25 euro, alcoholwaarde: 7");
-        System.out.println("Bier: kost 2,10 euro, alcoholwaarde: 5");
+        System.out.println("Parbo bier: kost 2,10 euro, alcoholwaarde: 5");
         System.out.println("Fris: kost 1,10 euro, alcoholwaarde: -1");
+        System.out.println("Wil je naar huis? Type dan 'stop'. ");
         System.out.println("Pas op dat je niet teveel alcoholische drankjes drinkt want dan schenken we niks meer in en kun je naar huis!");
     }
 
@@ -62,15 +64,15 @@ public class UI {
     }
 
     void bestellingDoen(String invoer){
-          if (invoer.equals("bier")) {
+          if (invoer.equals("parbo bier") || invoer.equals("bier")) {
             if (voorraad.getAantalBier() > 0 && klant.geld > bier.prijs) {
-                System.out.println("Hoeveel biertjes?");
+                System.out.println("Hoeveel Parbo biertjes?");
                 aantalBierGedronken = Integer.parseInt(scanner.nextLine());
-                voorraad.aantalBier -= aantalBierGedronken; //voorraad neemt af
+                voorraad.aantalBier-= aantalBierGedronken; //voorraad neemt af
                 klant.geld -= (bier.prijs * aantalBierGedronken);
                 klant.dronkenschap += (bier.dronkenschap * aantalBierGedronken);
             } else if (voorraad.getAantalBier() <= 0) {
-                System.out.println("Sorry, het bier is op!");
+                System.out.println("Sorry, het Parbo bier is op!");
             } else if (klant.geld < bier.prijs) {
                 System.out.println("Je hebt niet genoeg geld:-(");
             }
