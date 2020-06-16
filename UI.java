@@ -30,53 +30,6 @@ public class UI {
             }
             bestellingDoen(invoer);
             printVoorraad();
-//            else if (invoer.equals("bier")) {
-//                if (voorraad.getAantalBier() > 0 && klant.geld > bier.prijs) {
-//                    System.out.println("Hoeveel biertjes?");
-//                    int aantalBiertjes = Integer.parseInt(scanner.nextLine());
-//                    voorraad.aantalBier -= aantalBiertjes; //voorraad neemt af
-//                    klant.geld -= (bier.prijs * aantalBiertjes);
-//                    klant.dronkenschap += (bier.dronkenschap * aantalBiertjes);
-//                } else if (voorraad.getAantalBier() <= 0) {
-//                    System.out.println("Sorry, het bier is op!");
-//                } else if (klant.geld < bier.prijs) {
-//                    System.out.println("Je hebt niet genoeg geld:-(");
-//                }
-//                System.out.println(klant);
-//                printVoorraad();
-//            }
-//
-//            else if (invoer.equals("wijn")) {
-//                if (voorraad.getAantalWijn() > 0 && klant.geld > wijn.prijs) {
-//                    System.out.println("Hoeveel wijntjes?");
-//                    int aantalWijntjes = Integer.parseInt(scanner.nextLine());
-//                    voorraad.aantalWijn -= aantalWijntjes; //voorraad neemt af
-//                    klant.geld -= (wijn.prijs * aantalWijntjes);
-//                    klant.dronkenschap += (wijn.dronkenschap * aantalWijntjes);
-//                } else if (voorraad.getAantalWijn() <= 0) {
-//                        System.out.println("Sorry, helaas is de wijn op!");
-//                } else if (klant.geld < wijn.prijs) {
-//                        System.out.println("Je hebt niet genoeg geld:-(");
-//                    }
-//                System.out.println(klant);
-//                printVoorraad();
-//                }
-//
-//            else if (invoer.equals("fris")) {
-//                if(voorraad.getAantalFris() > 0 && klant.geld > fris.prijs){
-//                    System.out.println("Hoeveel fris?");
-//                    int aantalFris = Integer.parseInt(scanner.nextLine());
-//                    voorraad.aantalFris -= aantalFris; //voorraad neemt af
-//                    klant.geld -= (fris.prijs * aantalFris);
-//                    klant.dronkenschap -= (fris.dronkenschap * aantalFris);
-//                } else if (voorraad.getAantalFris() <= 0) {
-//                    System.out.println("Sorry, helaas is de fris op!");
-//                } else if (klant.geld < fris.prijs) {
-//                    System.out.println("Je hebt niet genoeg geld:-(");
-//                }
-//                System.out.println(klant);
-//                printVoorraad();
-//            }
         }
     }
 
