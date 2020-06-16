@@ -15,6 +15,13 @@ public class Drank {
 
     }
 
+    double getPrijs(){
+        return this.prijs;
+    }
+    String getNaamDrank(){
+        return this.naamDrank;
+    }
+
     @Override
     public String toString() {
         return "Deze " + this.naamDrank + " kost " + this.prijs + " euro's";
