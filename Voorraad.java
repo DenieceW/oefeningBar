@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Voorraad {
-    int aantalFris = 2;
-    int aantalWijn = 30;
-    int aantalBier = 30;
+    int aantalFris = 10;
+    int aantalWijn = 10;
+    int aantalBier = 10;
 
     int getAantalFris(){
         return aantalFris;
