@@ -5,21 +5,12 @@ public class Drank {
     int dronkenschap;
     double prijs;
 
-
     Drank(String naam, double prijs, int dronkenschap){
         this.naamDrank = naam;
         this.prijs = prijs;
         this.dronkenschap = dronkenschap;
     }
     Drank(){
-
-    }
-
-    double getPrijs(){
-        return this.prijs;
-    }
-    String getNaamDrank(){
-        return this.naamDrank;
     }
 
     @Override

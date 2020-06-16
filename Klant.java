@@ -12,7 +12,6 @@ public class Klant {
     }
 
     Klant(){
-
     }
 
     int getGeld(){

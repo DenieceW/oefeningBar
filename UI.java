@@ -7,7 +7,7 @@ public class UI {
     Scanner scanner = new Scanner(System.in);
     Drank bier = new Drank("bier",2.10,5);
     Drank wijn = new Drank("wijn",4.25,7);
-    Drank fris = new Drank("fris",1.10,-1);
+    Drank fris = new Drank("fris",1.10,2);
     Voorraad voorraad = new Voorraad();
     Klant klant = new Klant();
 
@@ -40,10 +40,10 @@ public class UI {
         klant.geld = Integer.parseInt(scanner.nextLine());
         System.out.println("**********************");
         System.out.println("Je kunt een keuze maken uit onderstaande drankjes!");
-        System.out.println("Wijn: kost 4,25 euro");
-        System.out.println("Bier: kost 2,10 euro");
-        System.out.println("Fris: kost 1,10 euro");
-        System.out.println("Pas op dat je niet teveel alcoholische drankjes drinkt!");
+        System.out.println("Wijn: kost 4,25 euro, alcoholwaarde: 7");
+        System.out.println("Bier: kost 2,10 euro, alcoholwaarde: 5");
+        System.out.println("Fris: kost 1,10 euro, alcoholwaarde: -1");
+        System.out.println("Pas op dat je niet teveel alcoholische drankjes drinkt want dan schenken we niks meer in en kun je naar huis!");
     }
 
     void printVoorraad(){
